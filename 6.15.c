@@ -8,7 +8,7 @@ int main()
 	int i = 0;
 	int j = 0;
 	/*
-	//ĞĞĞ¡±ê±éÀú
+	//è¡Œå°æ ‡éå†
 	for (i = 0; i < M; i++)
 	{
 		for (j = 0; j < N; j++)
@@ -16,9 +16,10 @@ int main()
 			printf("%d\t", a[i][j]);
 		}
 		printf("\n");
-	}*/
+	}
+	*/
 
-	//ÁĞĞ¡±ê±éÀú
+	//åˆ—å°æ ‡éå†
 	for (j = 0; j < N; j++)
 	{
 		for (i = 0; i < M; i++)
