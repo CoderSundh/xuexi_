@@ -30,3 +30,27 @@ int main()
 	}
 	return 0;
 }
+
+/*
+//对3行4列的矩阵求其最大值，以及其所在的行号和列号
+int main()
+{
+	int a[M][N] = { {1,5,9,6},{8,5,12,3},{-5,8,-15,3} };
+	int row = 0, colum = 0;
+	int i=0,j=0,max = 0;
+	for (i = 0; i < M; i++)
+	{
+		for (j = 0; j < N; j++)
+		{
+			if (a[i][j] >= max)
+			{
+				max = a[i][j];
+				row = i+1;
+				colum = j+1;
+			}
+		}
+	}
+	printf("最大值为:%d\n所在行号:%d\n所在列号:%d\n",max,row,colum);
+	return 0;
+}
+*/
