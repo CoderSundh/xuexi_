@@ -1,38 +1,34 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #define SIZE 3
 #include <stdio.h>
-//¶¨Òå½á¹¹Ìå£¨Ê¹ÓÃtypedef)£¬°üº¬Ñ§ÉúµÄÐÅÏ¢£¨ÐòºÅ£¬ÈýÃÅ¿ÎµÄ³É¼¨£¬Æ½¾ù·Ö£©£¬´Ó¼üÅÌÊäÈëÑ§ÉúµÄÐÅÏ¢£¬¼ÆËãÆ½¾ùÖµ£¬²¢ÁÐ³öÕâ¸öÑ§ÉúµÄÐÅÏ¢¡£
+//å®šä¹‰ç»“æž„ä½“ï¼ˆä½¿ç”¨typedef)ï¼ŒåŒ…å«å­¦ç”Ÿçš„ä¿¡æ¯ï¼ˆåºå·ï¼Œä¸‰é—¨è¯¾çš„æˆç»©ï¼Œå¹³å‡åˆ†ï¼‰ï¼Œä»Žé”®ç›˜è¾“å…¥å­¦ç”Ÿçš„ä¿¡æ¯ï¼Œè®¡ç®—å¹³å‡å€¼ï¼Œå¹¶åˆ—å‡ºè¿™ä¸ªå­¦ç”Ÿçš„ä¿¡æ¯ã€‚
 typedef struct student
 {
-	int num;//Ñ§ºÅ
-	int score[SIZE];//Èý¿Æ³É¼¨
-	float avg;//³É¼¨Æ½¾ù·Ö£¬±£ÁôÁ½Î»Ð¡Êý
+	int num;//å­¦å·
+	int score[SIZE];//ä¸‰ç§‘æˆç»©
+	float avg;//æˆç»©å¹³å‡åˆ†ï¼Œä¿ç•™ä¸¤ä½å°æ•°
 }STU;
 int main()
 {
 	int i = 0;
-	//int j = 0;
 	STU a;
 	a.avg=0;
-	printf("ÇëÊäÈë¸ÃÉúµÄÐòºÅ£º");
+	printf("è¯·è¾“å…¥è¯¥ç”Ÿçš„åºå·ï¼š");
 	scanf("%d", &a.num);
-	printf("ÇëÊäÈë¸ÃÉúµÄ³É¼¨\n");
+	printf("è¯·è¾“å…¥è¯¥ç”Ÿçš„æˆç»©\n");
 	for (i = 0; i < SIZE; i++)
 	{
-		printf("ÇëÊäÈëµÚ%dÃÅµÄ³É¼¨£º",i+1);
+		printf("è¯·è¾“å…¥ç¬¬%dé—¨çš„æˆç»©ï¼š",i+1);
 		scanf("%d",&a.score[i]);
 		a.avg = a.avg + a.score[i];
 	}
 	a.avg = a.avg / SIZE;
-	printf("Ñ§ÉúµÄÐòºÅÊÇ:%d\n",a.num);
-	/*printf("Ñ§ÉúµÄÈýÃÅ³É¼¨·Ö±ðÊÇ:");
-	printf("µÚÒ»ÃÅ£º%d£¬µÚ¶þÃÅ£º%d£¬µÚÈýÃÅ£º%d\n",a.score[i]);*/
+	printf("å­¦ç”Ÿçš„åºå·æ˜¯:%d\n",a.num);
 	for (i = 0; i < SIZE; i++)
 	{
-		printf("¸ÃÉúµÄµÚ%dÃÅ³É¼¨ÊÇ:%d",i+1,a.score[i]);
+		printf("è¯¥ç”Ÿçš„ç¬¬%dé—¨æˆç»©æ˜¯:%d",i+1,a.score[i]);
 	}
 	printf("\n");
-	printf("Ñ§ÉúµÄÆ½¾ù³É¼¨ÊÇ:%.2f£¨±£ÁôÁ½Î»Ð¡Êý£©\n",a.avg);
-	//£¬µÚÒ»ÃÅµÄ³É¼¨ÊÇ:%d£¬µÚ¶þÃÅµÄ³É¼¨ÊÇ:%d£¬µÚÈýÃÅµÄ³É¼¨ÊÇ:%d£¬Æ½¾ù³É¼¨ÊÇ%.2f\n,a.score[i],a.avg
+	printf("å­¦ç”Ÿçš„å¹³å‡æˆç»©æ˜¯:%.2fï¼ˆä¿ç•™ä¸¤ä½å°æ•°ï¼‰\n",a.avg);
 	return 0;
 }
