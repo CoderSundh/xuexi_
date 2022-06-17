@@ -1,5 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
+
+函数作用域的学习
 int a = 1;
 int b = 1;
 int c = 2;
