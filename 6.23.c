@@ -13,20 +13,12 @@ int main()
 	}
 	return 0;
 }
-//º¯ÊıµÄ×÷ÓÃ£º¸ø¶¨Ò»¸öÊı×énums£¬¾­¹ı º¯ÊıµÄ¼ÆËã¿ÉÒÔµÄ³öÇóºÍ½á¹û£¬
-//ÇóºÍ¹«Ê½ÎªrunningSum[i] = sum(nums[0]...nums[i])
-//int* runningSum(int* nums, int numsSize, int* returnSize) {
-//	*returnSize = numsSize;//ÀûÓÃÖ¸ÕëµÄ·½·¨±íÊ¾³ö·µ»ØÖµµÄ¸öÊı
-//	for (int i = 1; i < numsSize; i++) {
-//		nums[i] += nums[i - 1];
-//	}
-//	return nums;
-//}
+å‡½æ•°çš„ä½œç”¨ï¼šç»™å®šä¸€ä¸ªæ•°ç»„numsï¼Œç»è¿‡ å‡½æ•°çš„è®¡ç®—å¯ä»¥çš„å‡ºæ±‚å’Œç»“æœï¼Œ
+æ±‚å’Œå…¬å¼ä¸ºrunningSum[i] = sum(nums[0]...nums[i])
 int* runningSum(int* nums, int numsSize, int* returnSize) {
-	returnSize[0] = nums[0];
-	*returnSize = numsSize;//ÀûÓÃÖ¸ÕëµÄ·½·¨±íÊ¾³ö·µ»ØÖµµÄ¸öÊı
+	*returnSize = numsSize;//åˆ©ç”¨æŒ‡é’ˆçš„æ–¹æ³•è¡¨ç¤ºå‡ºè¿”å›å€¼çš„ä¸ªæ•°
 	for (int i = 1; i < numsSize; i++) {
-		returnSize[i] = returnSize[i-1] + nums[i];
+		nums[i] += nums[i - 1];
 	}
-	return returnSize;
+	return nums;
 }
