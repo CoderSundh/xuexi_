@@ -16,7 +16,8 @@ int main()
 函数的作用：给定一个数组nums，经过 函数的计算可以的出求和结果，
 求和公式为runningSum[i] = sum(nums[0]...nums[i])
 int* runningSum(int* nums, int numsSize, int* returnSize) {
-	*returnSize = numsSize;//利用指针的方法表示出返回值的个数
+	*returnSize = numsSize;//题源来自力扣，这里的*returnSize是一个输出参数，指针类型，该地址存取的是结果数组的长度。
+	//leetcode后台测试用例运行时，需要该参数，不然只有结果数组的指针，没有长度。
 	for (int i = 1; i < numsSize; i++) {
 		nums[i] += nums[i - 1];
 	}
