@@ -1,10 +1,10 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
 int* runningSum(int* nums, int numsSize, int* returnSize);
-#define M 5
+#define M 4
 int main()
 {
-	int a[M] = {1,2,3,4,5};
+	int a[M] = {1,2,3,4};
 	int b[M] = { 0 };
 	runningSum(a,M,b);
 	for (int i = 0; i < M; i++)
