@@ -30,3 +30,32 @@ int	main(void)
 	puts(b);
 	return 0;
 }
+
+
+//方法2：
+
+char* myStrcpy2(char* pDes, const char* pSrc)
+{
+	if (0 == pDes || 0 == pSrc) {
+		return 0;
+	}
+	char* t = pDes, i = 0;
+	while (pSrc[i]) {
+		pDes[i] = pSrc[i];
+		i++;	
+	}
+	pDes[i] = '\0';
+	return t;
+}
+int	main(void)
+{
+	char a[100] = "china";
+	char b[100] = "japan";
+	char t[100] = "";
+	myStrcpy2(t, a);
+	myStrcpy2(a, b);
+	myStrcpy2(b, t);
+	puts(a);
+	puts(b);
+	return 0;
+}
