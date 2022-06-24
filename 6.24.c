@@ -1,28 +1,28 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
 #include <string.h>
-//DIY¿âº¯Êı DIY strcpy
+//DIYåº“å‡½æ•° DIY strcpy
 
-//·½·¨1£º
+//æ–¹æ³•1ï¼š
 char* myStrcpy1(char* pDes, const char* pSrc)
-//const µÄÒâË¼ÊÇÓÃconst¶¨ÒåµÄ±äÁ¿µÄÖµÊÇ²»ÔÊĞí¸Ä±äµÄ£¬²»ÔÊĞí¸øËûÖØĞÂ¸³Öµ£¬·ÀÖ¹ÔÚÕâ¸öº¯ÊıÖĞ´«À´µÄÊıÖµ±»¸Ä±ä
+//const çš„æ„æ€æ˜¯ç”¨constå®šä¹‰çš„å˜é‡çš„å€¼æ˜¯ä¸å…è®¸æ”¹å˜çš„ï¼Œä¸å…è®¸ç»™ä»–é‡æ–°èµ‹å€¼ï¼Œé˜²æ­¢åœ¨è¿™ä¸ªå‡½æ•°ä¸­ä¼ æ¥çš„æ•°å€¼è¢«æ”¹å˜
 {
 	if(0==pDes||0==pSrc){
 		return 0;
 	}
 	char* t = pDes;
-	while (*pDes != '\0')
+	while (*pSrc != '\0')//å¯¹å°†è¦å¤åˆ¶çš„å†…å®¹è¿›è¡Œåˆ¤æ–­
 	{
 		*pDes++ = *pSrc++;
 	}
-	*pDes = '\0';
+	*pDes = '\0';//å…¶æœ€åä¸€é¡¹ç›´æ¥èµ‹å€¼ä¸º'\0'ï¼Œè¿™æ ·åœ¨åé¢è¾“å‡ºæ—¶å¯åœ¨æ­¤å¤„ç›´æ¥ç»“æŸ
 	return t;
 }
 int	main(void)
 {
 	char a[100] = "china";
 	char b[100] = "japan";
-	char t[100] = "     ";
+	char t[100] = "";
 	myStrcpy1(t, a);
 	myStrcpy1(a, b);
 	myStrcpy1(b, t);
